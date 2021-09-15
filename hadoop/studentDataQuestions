@@ -1,0 +1,12 @@
+
+
+Q1:Total marks Scored by each student?
+Q2:Average marks Scored by each student?
+Q3:Percentage of marks obtained by each student?
+Q4:List all students passed in physics?(passmark--above 50)
+Q5:Print count of passed student in each subject?
+Q6:List all student names who failed in each subject along with their mark in the below form
+    eg: chemistry- rahul(30),akhil(25)
+Q7:List all subject names passed by each student along with marks and Total marks of passed subjects
+    eg: Akhil -Chemistry(80),Maths(70)--150
+

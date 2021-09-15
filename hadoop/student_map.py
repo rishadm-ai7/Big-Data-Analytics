@@ -5,6 +5,7 @@ import sys
 for line in sys.stdin:
     line = line.strip()
     words = line.split(" ")
+    print("%s\t%s"%(words[0],words[-1]))
 
-    for word in words:
-        print("%s\t%s"%(word,1))
+
+
