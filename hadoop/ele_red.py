@@ -75,23 +75,47 @@
 
 # Q.4top three consuming months in each year?
 
-#DIDNT GET IT
+import sys
+currentyear=None
+key_value={}
+for line in sys.stdin:
+    line=line.strip()
+    year,value,month=line.split("\t")
+    value=int(value)
+    if currentyear==year:
+        key_value[month]=value
+    else:
+        if currentyear:
+            print("Top consuming months in year %s"%currentyear)
+            x=sorted(key_value.items(),key=lambda x:x[1],reverse=True)
+            for i in range(3):
+                print("%s\t%s"%(x[i]))
+            key_value.clear()
+
+        currentyear=year
+        key_value[month]=value
+
+print("Top consuming months in year %s"%currentyear)
+x=sorted(key_value.items(),key=lambda x:x[1],reverse=True)
+for i in range(3):
+    print("%s\t%s"%x[i])
+
 
 #Q.5 total money paid by institution in months feb to june if charge is 6 rs/unit?
 
-import sys
-sum=0
-for line in sys.stdin:
-    line=line.strip()
-    word=line.split("\t")
-    month=int(word[0])
-    amount=int(word[1])
-
-
-    if month>=2 and month<=6:
-        sum+=amount
-
-print("The company paid Rs. %s"%(sum*6))
+# import sys
+# sum=0
+# for line in sys.stdin:
+#     line=line.strip()
+#     word=line.split("\t")
+#     month=int(word[0])
+#     amount=int(word[1])
+#
+#
+#     if month>=2 and month<=6:
+#         sum+=amount
+#
+# print("The company paid Rs. %s"%(sum*6))
 
 
 

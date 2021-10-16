@@ -29,14 +29,24 @@ import calendar as cal
 #         for i,month in enumerate(word):
 #             print("%s,%s"%(i,month))
 
-
-#Q5 total money paid by institution in months feb to june if charge is 6 rs/unit?
+#Q4 top three consuming months in each year?
 
 import sys
 for line in sys.stdin:
     line=line.strip()
     word=line.split("\t")
     year=word[0]
-    for i,cons in enumerate(word):
-        if cons!=year:
-            print("%s\t%s"%(i,cons))
+    for i,value in enumerate(word):
+        if value!=year:
+            print("%s\t%s\t%s"%(year,value,cal.month_name[i]))
+
+#Q5 total money paid by institution in months feb to june if charge is 6 rs/unit?
+#
+# import sys
+# for line in sys.stdin:
+#     line=line.strip()
+#     word=line.split("\t")
+#     year=word[0]
+#     for i,cons in enumerate(word):
+#         if cons!=year:
+#             print("%s\t%s\t%s"%(cal.month_name[i]))
