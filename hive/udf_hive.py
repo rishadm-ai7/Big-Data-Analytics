@@ -6,5 +6,6 @@ for x in sys.stdin:
         fname,lname=x.split(" ")
     else :
         fname=x
+        lname=''
     lname=lname.lower()
     print(" ".join([fname,lname]))
