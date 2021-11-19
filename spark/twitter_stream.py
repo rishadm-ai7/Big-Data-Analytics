@@ -2,7 +2,6 @@ import tweepy
 import os
 from textblob import TextBlob
 
-
 os.chdir('/home/rishad/pyspark_stream')
 # to change the directory of the data being saved
 #the data which comes from the server is in the json format.
@@ -30,15 +29,5 @@ for tweets in public_tweets:
     analysis = TextBlob(tweets.text)
     print(analysis.sentiment)
 
-print("")
-
 save_file.write(str(public_tweets))
 save_file.close()
-
-
-
-
-
-
-
-
